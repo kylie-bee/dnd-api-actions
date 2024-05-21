@@ -1,0 +1,31 @@
+# Required: A short name for the action package
+name: DnD 5e API
+
+# Required: A description of what's in the action package.
+description: A package that provides a Python API for the D&D 5e API.
+
+# Required: A link to where the documentation on the package lives.
+documentation: https://github.com/kylie-bee/dnd-api-actions
+
+dependencies:
+  conda-forge:
+    - python=3.10.12
+    - uv=0.1.45
+  pypi:
+    - sema4ai-actions=0.6.0
+    - dnd5epy=1.0.7
+
+packaging:
+  # This section is optional.
+  # By default, all files and folders in this directory are packaged when uploaded.
+  # Add exclusion rules below (expects glob format: https://docs.python.org/3/library/glob.html)
+  exclude:
+    - ./.git/**
+    - ./.vscode/**
+    - ./devdata/**
+    - ./output/**
+    - ./.DS_store/**
+    - ./venv/**
+    - ./.venv/**
+    - ./**/*.pyc
+    - ./**/*.zip
